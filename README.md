@@ -1,4 +1,4 @@
-App Engine Java Guestbook
+App Engine Java fractal
 Copyright (C) 2010-2012 Google Inc.
 
 ## Sample guestbook for use with App Engine Java.
