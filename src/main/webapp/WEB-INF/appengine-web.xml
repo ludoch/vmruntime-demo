@@ -21,6 +21,7 @@
     
   <env-variables>
     <env-var name="DBG_ENABLE" value="1" />
+    <env-var name="CDBG_ENABLE" value="1" />
     <env-var name="DBG_PORT" value="5005" />
   </env-variables>
 </appengine-web-app>
