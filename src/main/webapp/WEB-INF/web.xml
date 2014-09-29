@@ -15,5 +15,13 @@
     <servlet-name>tile</servlet-name>
     <url-pattern>/mandelbrot256_files/*</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>debug</servlet-name>
+    <servlet-class>com.google.appengine.demos.mandelbrot.ServletToDebug</servlet-class>
+  </servlet>
 
+  <servlet-mapping>
+    <servlet-name>debug</servlet-name>
+    <url-pattern>/ServletToDebug</url-pattern>
+  </servlet-mapping>
 </web-app>
