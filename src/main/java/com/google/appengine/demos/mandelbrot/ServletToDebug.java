@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ludo
  */
-@WebServlet(name = "ServletToDebug", urlPatterns = {"/ServletToDebug"})
 public class ServletToDebug extends HttpServlet {
 
   /**
