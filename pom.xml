@@ -91,7 +91,7 @@
       <plugin>
         <groupId>com.google.appengine</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
-        <version>1.9.12</version>
+        <version>1.9.12-SNAPSHOT</version>
         <configuration>
 
           <gcloud_directory>/Users/ludo/google-cloud-sdk</gcloud_directory>

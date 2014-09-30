@@ -7,11 +7,14 @@ package com.google.appengine.demos.mandelbrot;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 /**
  *
  * @author ludo
@@ -36,10 +39,29 @@ public class ServletToDebug extends HttpServlet {
       out.println("<!DOCTYPE html>");
       out.println("<html>");
       out.println("<head>");
-      out.println("<title>Servlet ServletToDebug</title>");      
+      out.println("<title>Servlet ServletToDebug</title>");
       out.println("</head>");
       out.println("<body>");
       out.println("<h1>Java One Servlet ServletToDebug at " + request.getContextPath() + "</h1>");
+      out.println("<h1>System.getProperties()</h1>");
+      System.out.println("<ol>");
+      Iterator keys = System.getProperties().keySet().iterator();
+      while (keys.hasNext()) {
+        String key = (String) keys.next();
+        String value = System.getProperty(key).replaceAll("\\+", " ");
+        out.println("<li>" + key + "=" + value);
+      }
+      out.println("</ol>");
+      out.println("<h1>System.getenv()</h1>");
+      System.out.println("<ol>");
+      Map<String, String> variables = System.getenv();
+
+      for (Map.Entry<String, String> entry : variables.entrySet()) {
+        String name = entry.getKey();
+        String value = entry.getValue();
+        out.println("<li>" + name + "=" + value);
+      }
+      out.println("</ol>");
       out.println("</body>");
       out.println("</html>");
     }
