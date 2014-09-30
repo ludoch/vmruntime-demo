@@ -7,7 +7,10 @@ package com.google.appengine.demos.mandelbrot;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -56,11 +59,25 @@ public class ServletToDebug extends HttpServlet {
       System.out.println("<ol>");
       Map<String, String> variables = System.getenv();
 
-      for (Map.Entry<String, String> entry : variables.entrySet()) {
+      variables.entrySet().stream().forEach((entry) -> {
         String name = entry.getKey();
         String value = entry.getValue();
         out.println("<li>" + name + "=" + value);
-      }
+      });
+      out.println("</ol>");
+
+      List<Person> personList = Person.createShortList();
+      // Use Lambda instead
+      // Print Asc
+      //System.out.println("=== Sorted Asc SurName ===");
+      Collections.sort(personList, (Person p1, Person p2) -> p1.getSurName().compareTo(p2.getSurName()));
+      out.println("<h1>And now, the Java 8 Lambdas in Google App Engine....</h1>");
+      System.out.println("<ol>");
+      
+      personList.stream().forEach(p -> {
+        p.printName(out);
+      });
+
       out.println("</ol>");
       out.println("</body>");
       out.println("</html>");

@@ -7,7 +7,7 @@
 
   <vm>true</vm>
   <manual-scaling>
-    <instances>1</instances>
+    <instances>5</instances>
   </manual-scaling>
 
   <precompilation-enabled>false</precompilation-enabled>
@@ -16,11 +16,10 @@
     </vm-settings>
   <system-properties>
     <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
-    <property name="LUDOVIC" value="My Self" />
+    <property name="LUDOVIC" value="is @ JavaOne 2014. Cool..." />
   </system-properties>
     
   <env-variables>
-    <env-var name="DBG_ENABLE" value="1" />
     <env-var name="CDBG_ENABLE" value="1" />
     <env-var name="DBG_PORT" value="5005" />
   </env-variables>
