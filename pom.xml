@@ -14,8 +14,8 @@
     <appengine.app.version>1</appengine.app.version>
     <appengine.target.version>1.9.12</appengine.target.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -103,7 +103,7 @@
           </gcloud_modules-->
 
           <!--gcloud_verbosity>debug</gcloud_verbosity-->
-          <gcloud_app_api_host>172.31.154.192:51515</gcloud_app_api_host>
+          <gcloud_app_api_host>10.95.56.16:51515</gcloud_app_api_host>
           <!--gcloud_app_version>dockerversion</gcloud_app_version-->
           <gcloud_app_server>preview.appengine.google.com</gcloud_app_server>
         </configuration>

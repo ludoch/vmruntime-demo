@@ -7,7 +7,7 @@
 
   <vm>true</vm>
   <manual-scaling>
-    <instances>5</instances>
+    <instances>2</instances>
   </manual-scaling>
 
   <precompilation-enabled>false</precompilation-enabled>
